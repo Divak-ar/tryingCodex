@@ -1,0 +1,6 @@
+ABAP Internal Tables Best Practices
+
+1. Use SORTED TABLE or HASHED TABLE when lookup speed matters.
+2. For frequent key access, define a UNIQUE KEY if business rules allow it.
+3. Avoid nested loops over large STANDARD TABLE objects when a key-based read can be used.
+4. Use LOOP AT ... ASSIGNING FIELD-SYMBOL(<fs>) to reduce copy overhead.
