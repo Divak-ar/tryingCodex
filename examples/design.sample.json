@@ -1,0 +1,28 @@
+{
+  "data_sources": {
+    "supported_doc_types": [
+      "ABAP Functional Spec"
+    ]
+  },
+  "chunking": {
+    "strategy": "fixed",
+    "max_tokens": 200,
+    "overlap_tokens": 20
+  },
+  "retrieval": {
+    "mode": "vector",
+    "top_k": 3,
+    "metadata_fields": [
+      "doc_id"
+    ]
+  },
+  "generation": {
+    "model": "gpt"
+  },
+  "evaluation": {
+    "metrics": {
+      "groundedness": 0.8
+    },
+    "golden_set_size": 10
+  }
+}
